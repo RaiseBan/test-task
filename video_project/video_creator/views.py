@@ -1,5 +1,6 @@
 from django.http import FileResponse, JsonResponse
 from .services import generate_scrolling_text_video
+from .models import RequestLog
 
 
 def create_video(request):
@@ -7,6 +8,9 @@ def create_video(request):
 
     try:
         video_stream = generate_scrolling_text_video(text)
+
+        log_entry = RequestLog(text=text)
+        log_entry.save()
 
         return FileResponse(video_stream, as_attachment=True, filename='scrolling_text.mp4', content_type='video/mp4')
 
