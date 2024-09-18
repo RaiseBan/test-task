@@ -20,7 +20,8 @@ def generate_scrolling_text_video(text):
 
     out = cv2.VideoWriter('temp.mp4', fourcc, fps, (width, height))
 
-    font_path = os.path.join(settings.BASE_DIR, 'video_creator', 'static', 'fonts', 'arial.ttf')
+    font_path = os.path.join(settings.BASE_DIR, 'video_creator', 'static', 'video_creator', 'fonts', 'arial.ttf')
+
     font = ImageFont.truetype(font_path, font_size)
 
     text_x = width
