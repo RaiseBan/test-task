@@ -36,9 +36,10 @@
 ### Секреты
 
 Секреты проекта (например, `SECRET_KEY`, `DEBUG`, и другие параметры) хранятся в файле `.env`, который добавлен в `.gitignore`, поэтому его нет в репозитории. Вот пример содержимого этого файла:
+```python
 SECRET_KEY='your-secret-key' 
 DEBUG=FALSE 
 ALLOWED_HOSTS='your-domain' 
 CACHE_LOCATION='cache directory location' 
-
+```
 
